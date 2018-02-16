@@ -67,6 +67,9 @@ void setup() {
   Serial.begin(115200);
   pinMode(16, OUTPUT);
 
+  Serial.print("MAC: ");
+  Serial.println(WiFi.macAddress());
+
   emon1.current(A0, 60);  
   dht.begin();
   
